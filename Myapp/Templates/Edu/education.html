@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Smart Campus Solutions</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Merriweather&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f9fafc;
+    color: #333;
+  }
+
+  /* Header */
+  header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    background: rgba(44,130,201,0.95);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 60px;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+  header h1 { font-size: 1.5rem; font-weight: 700; }
+  nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav a:hover { color: #ffd65a; }
+
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url('https://images.unsplash.com/photo-1581090700227-4c4c32446b89?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom right, rgba(44,130,201,0.85), rgba(0,0,0,0.6));
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+  }
+  .hero-content h1 {
+    font-size: 3rem; font-weight: 700;
+    margin-bottom: 20px; text-transform: uppercase;
+  }
+  .hero-content p {
+    font-size: 1.2rem; margin-bottom: 30px; line-height: 1.6;
+  }
+  .hero-content a {
+    background: #ffd65a;
+    color: #222;
+    padding: 14px 34px;
+    font-weight: 600;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .hero-content a:hover { background: #fcbf1e; }
+
+  /* Section base */
+  section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  section h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    font-family: 'Merriweather', serif;
+    color: #2c82c9;
+  }
+  section .underline {
+    width: 120px;
+    border-bottom: 3px solid #ffd65a;
+    margin: 0 auto 40px;
+  }
+
+  /* Vision Section */
+  #vision {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 60px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  #vision svg {
+    width: 120px; height: 120px;
+    fill: #2c82c9;
+    flex-shrink: 0;
+  }
+  #vision p, #vision ul {
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+  #vision ul { margin-top: 12px; padding-left: 1.2em; list-style: disc; }
+  #vision ul li { margin-bottom: 8px; }
+
+  /* Core Solutions Grid */
+  #core {
+    background: #fdfdfd;
+  }
+  .core-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .core-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+  .core-card:hover { transform: translateY(-6px); }
+  .core-icon {
+    width: 70px; height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    margin-bottom: 16px;
+  }
+  .core-icon svg { width: 36px; height: 36px; fill: white; }
+  .core-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #2c82c9; }
+  .core-card p { font-size: 1rem; line-height: 1.5; }
+
+  .green { background: #41886c; }
+  .red { background: #9d3831; }
+  .yellow { background: #d8b645; }
+  .blue { background: #3b6586; }
+  .orange { background: #d37a26; }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 30px;
+    background: #2c82c9;
+    color: white;
+    margin-top: 60px;
+  }
+
+  @media(max-width: 768px) {
+    header { padding: 16px 20px; flex-direction: column; }
+    #vision { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Smart Campus</h1>
+  <nav>
+    <a href="#vision">Vision</a>
+    <a href="#core">Solutions</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Empowering Education with Technology</h1>
+    <p>Affordable, scalable, and sustainable IT infrastructure to transform classrooms, campuses, and communities.</p>
+    <a href="#vision">Discover More</a>
+  </div>
+</section>
+
+<!-- Vision & Objective -->
+<section id="vision">
+  <svg viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30"/>
+    <circle cx="32" cy="32" r="22" fill="#d6e1c2"/>
+    <circle cx="32" cy="32" r="16" fill="#2c82c9"/>
+    <circle cx="32" cy="32" r="8" fill="#d6e1c2"/>
+  </svg>
+  <div>
+    <h2>Vision & Objective</h2>
+    <div class="underline"></div>
+    <p><strong>Vision:</strong> Empower educational institutions with modern digital infrastructure that drives innovation and inclusivity.</p>
+    <p><strong>Objective:</strong></p>
+    <ul>
+      <li>Transform learning environments with technology</li>
+      <li>Promote digital literacy across rural and urban students</li>
+      <li>Enhance teaching outcomes and operational efficiency</li>
+      <li>Build sustainable & eco-friendly digital campuses</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Core Solutions -->
+<section id="core">
+  <h2>Core Solution Areas</h2>
+  <div class="underline"></div>
+
+  <div class="core-grid">
+    <div class="core-card">
+      <div class="core-icon green">
+        <svg viewBox="0 0 64 64"><path d="M53 12H11a3 3 0 0 0-3 3v26a3 3 0 0 0 3 3h12v5l-6 6v3h30v-3l-6-6v-5h12a3 3 0 0 0 3-3V15a3 3 0 0 0-3-3Zm-30 26V26h34v12Z"/></svg>
+      </div>
+      <h3>Smart Classrooms</h3>
+      <p>Interactive digital learning with modern smart boards and real-time collaboration tools.</p>
+    </div>
+
+    <div class="core-card">
+      <div class="core-icon blue">
+        <svg viewBox="0 0 64 64"><path d="M32 44a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm13.78-8.9-2.2 2.2a13 13 0 0 0-21.16 0l-2.2-2.2a17 17 0 0 1 25.56 0zm-4.94-4.94-2.2 2.2a6 6 0 0 0-8.48 0l-2.2-2.2a10 10 0 0 1 12.88 0z"/></svg>
+      </div>
+      <h3>Campus-Wide Wi-Fi</h3>
+      <p>Seamless connectivity for students and staff with secure, high-speed internet.</p>
+    </div>
+
+    <div class="core-card">
+      <div class="core-icon red">
+        <svg viewBox="0 0 64 64"><path d="M32 12L12 52h40L32 12zm0 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg>
+      </div>
+      <h3>AI CCTV Security</h3>
+      <p>Smart surveillance systems with access control and AI-powered alerts.</p>
+    </div>
+
+    <div class="core-card">
+      <div class="core-icon orange">
+        <svg viewBox="0 0 64 64"><path d="M32 22a10 10 0 0 1 10 10 10 10 0 0 1-3 7.07L40 42l-4-4-4 4-1-2.93A10 10 0 0 1 22 32a10 10 0 0 1 10-10zM24 42l2 4h12l2-4h-16z"/></svg>
+      </div>
+      <h3>Centralized Management</h3>
+      <p>Unified content and device management across the entire campus network.</p>
+    </div>
+
+    <div class="core-card">
+      <div class="core-icon yellow">
+        <svg viewBox="0 0 64 64"><path d="M40 22l-16 0 0-4-8 8 8 8 0-4 16 0-4-4z"/></svg>
+      </div>
+      <h3>Collaboration Tools</h3>
+      <p>Digital platforms enabling teamwork among staff, students, and researchers.</p>
+    </div>
+
+    <div class="core-card">
+      <div class="core-icon green">
+        <svg viewBox="0 0 64 64"><path d="M48 34a10 10 0 0 0-20-4 8 8 0 0 0-8 10h28a6 6 0 0 0 0-6z"/></svg>
+      </div>
+      <h3>Cloud IT Support</h3>
+      <p>Scalable cloud infrastructure with predictive analytics and data security.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Smart Campus Solutions. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Simple animation on scroll
+  const cards = document.querySelectorAll('.core-card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, { threshold: 0.2 });
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = "translateY(40px)";
+    card.style.transition = "all 0.6s ease";
+    observer.observe(card);
+  });
+</script>
+</body>
+</html>

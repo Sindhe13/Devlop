@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Digital Agriculture Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            100: '#bae1f7',
+                            200: '#8db7e4',
+                            300: '#6aa0d6',
+                            400: '#4974c7',
+                            500: '#3a5bbf',
+                            600: '#3b63b8',
+                            700: '#3054a0',
+                            800: '#2f7fc1',
+                            900: '#1e2f5a',
+                        },
+                        gradient: {
+                            start: '#bae1f7',
+                            end: '#6aa0d6'
+                        }
+                    },
+                    fontFamily: {
+                        'century-gothic': ['Century Gothic', 'CenturyGothic', 'AppleGothic', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bubble {
+            background: radial-gradient(circle at 20% 20%, #f6f8fa, #cdd6de);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.9), inset 0 0 15px white;
+            border: 1px solid #fff;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, #3a5bbf, #6aa0d6);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="font-montserrat bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-primary text-2xl font-bold"><i class="fas fa-leaf mr-2"></i>BTMAgriSmart</span>
+            </div>
+
+          <nav class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li><a href="/Agri_2/" class="text-dark hover:text-primary font-medium transition-colors">Home</a></li>
+          <li><a href="/Agri_4/" class="text-dark hover:text-primary font-medium transition-colors">Solutions</a></li>
+          <li><a href="/Agri_5/" class="text-dark hover:text-primary font-medium transition-colors">About</a></li>
+         
+        </ul>
+      </nav>
+
+            <button class="md:hidden text-dark">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-16 md:py-24 bg-gradient-to-r from-primary-100 to-primary-300 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div class="bubble absolute rounded-full w-32 h-32 -top-12 -left-6"></div>
+            <div class="bubble absolute rounded-full w-20 h-20 top-16 left-12"></div>
+            <div class="bubble absolute rounded-full w-14 h-14 top-40 left-4"></div>
+            <div class="bubble absolute rounded-full w-20 h-20 bottom-20 left-16"></div>
+            <div class="bubble absolute rounded-full w-10 h-10 bottom-8 left-40"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Transforming Agriculture Through Technology</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">We're building the future of farming with innovative digital solutions that empower farmers and enhance productivity.</p>
+            <button class="bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                Learn More
+            </button>
+        </div>
+    </section>
+
+    <!-- Vision & Objective Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">Vision & Objective</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" 
+                         alt="Agricultural field" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4 text-primary-700">VISION:</h3>
+                    <p class="mb-6 text-lg">Enhance agricultural productivity, sustainability, and farmer income using digital and smart technology.</p>
+                    
+                    <h3 class="text-xl font-semibold mb-4 text-primary-700">OBJECTIVES:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            Enable real-time data-driven farming decisions
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            Reduce crop losses and optimize inputs
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            Improve market access and financial inclusion
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            Build climate-resilient and tech-enabled rural ecosystems
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Framework Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">Implementation Framework</h2>
+            
+            <div class="flex flex-col lg:flex-row">
+                <!-- Left Panel -->
+                <div class="w-full lg:w-1/4 bg-gradient-to-b from-primary-100 to-primary-300 p-8 rounded-l-lg relative overflow-hidden flex flex-col justify-center items-center">
+                    <div class="bubble rounded-full absolute w-32 h-32 -top-12 -left-6"></div>
+                    <div class="bubble rounded-full absolute w-20 h-20 top-12 left-4"></div>
+                    <div class="bubble rounded-full absolute w-14 h-14 top-32 left-12"></div>
+                    <div class="bubble rounded-full absolute w-20 h-20 bottom-16 left-10"></div>
+                    <div class="bubble rounded-full absolute w-10 h-10 bottom-4 left-40"></div>
+                    
+                    <h3 class="text-xl font-century-gothic font-bold text-center z-10 mt-8">IMPLEMENTATION<br />FRAMEWORK</h3>
+                </div>
+                
+                <!-- Right Panel -->
+                <div class="w-full lg:w-3/4 bg-white p-8 rounded-r-lg">
+                    <div class="space-y-4">
+                        <div class="card-hover bg-gradient-to-r from-primary-800 to-primary-300 text-white p-5 rounded-lg">
+                            <span class="font-bold mr-2">1.</span> Agri-Tech Feasibility & Requirement Study
+                        </div>
+                        <div class="card-hover bg-gradient-to-r from-teal-600 to-teal-500 text-white p-5 rounded-lg">
+                            <span class="font-bold mr-2">2.</span> Digital Mapping of Farming Clusters
+                        </div>
+                        <div class="card-hover bg-gradient-to-r from-green-600 to-green-500 text-white p-5 rounded-lg">
+                            <span class="font-bold mr-2">3.</span> IoT/Digital Infra Deployment & Integration
+                        </div>
+                        <div class="card-hover bg-gradient-to-r from-emerald-600 to-emerald-500 text-white p-5 rounded-lg">
+                            <span class="font-bold mr-2">4.</span> Farmer Training & Mobile App Enablement
+                        </div>
+                        <div class="card-hover bg-gradient-to-r from-green-700 to-green-600 text-white p-5 rounded-lg">
+                            <span class="font-bold mr-2">5.</span> Maintenance, Support & Policy Integration
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Infrastructure Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">Security & Infrastructure</h2>
+            
+            <div class="flex flex-col lg:flex-row">
+                <!-- Main Content -->
+                <div class="w-full lg:w-3/4 pr-0 lg:pr-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Column 1 -->
+                        <div class="space-y-12">
+                            <div class="text-center">
+                                <div class="bg-blue-100 p-4 rounded-full inline-block mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg>
+                                </div>
+                                <p class="font-medium">Surveillance Cameras at<br />Warehouses, Cold<br />Storages</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="bg-blue-100 p-4 rounded-full inline-block mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                                    </svg>
+                                </div>
+                                <p class="font-medium">IT Infrastructure: Servers,<br />Networking, Cloud<br />Storage</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Column 2 -->
+                        <div class="space-y-12">
+                            <div class="text-center">
+                                <div class="bg-blue-100 p-4 rounded-full inline-block mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                    </svg>
+                                </div>
+                                <p class="font-medium">Remote Access to<br />Irrigation Pumps and<br />Equipment</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="bg-blue-100 p-4 rounded-full inline-block mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <p class="font-medium">UPS, Solar Backup,<br />Rugged Devices for Field<br />Work</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Side Panel -->
+                <div class="w-full lg:w-1/4 mt-8 lg:mt-0 bg-gradient-to-b from-primary-100 to-primary-300 rounded-lg p-8 flex items-center justify-center relative">
+                    <div class="bubble rounded-full absolute w-14 h-14 top-6 right-8"></div>
+                    <div class="bubble rounded-full absolute w-10 h-10 top-20 right-16"></div>
+                    <div class="bubble rounded-full absolute w-16 h-16 bottom-16 right-10"></div>
+                    <div class="bubble rounded-full absolute w-8 h-8 bottom-4 right-6"></div>
+                    
+                    <h3 class="text-xl font-century-gothic font-bold text-center">SECURITY &<br />INFRASTRUCTURE</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farmer Mobile Apps Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">Farmer Mobile Apps & Market Integration</h2>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-12">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-md card-hover">
+                    <div class="flex justify-center mb-6">
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary-600" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1C10.8954 1 10 1.89543 10 3V4H7V6H10V10H7V12H10V20H8C7.44772 20 7 20.4477 7 21C7 21.5523 7.44772 22 8 22H16C16.5523 22 17 21.5523 17 21C17 20.4477 16.5523 20 16 20H14V10H16V8H14V6H17V4H14V3C14 1.89543 13.1046 1 12 1Z" />
+                            </svg>
+                            <svg class="h-12 w-12 text-primary-600 absolute -bottom-2 -right-4" viewBox="0 0 64 36" fill="currentColor">
+                                <rect width="64" height="36" rx="6" ry="6" />
+                                <rect x="7" y="26" width="12" height="3" rx="0.5" ry="0.5" fill="#1f3e89"/>
+                                <rect x="24" y="26" width="22" height="8" rx="1" ry="1" fill="#3564b0"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-lg font-medium text-center mb-4">Farmer Mobile App</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            <span>Weather, Soil, Crop Advisory</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            <span>Input & Equipment Marketplace</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            <span>Digital Financial Services</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            <span>Online Market Linkages</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-md card-hover">
+                    <div class="flex justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary-600" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1C10.8954 1 10 1.89543 10 3V4H7V6H10V10H7V12H10V20H8C7.44772 20 7 20.4477 7 21C7 21.5523 7.44772 22 8 22H16C16.5523 22 17 21.5523 17 21C17 20.4477 16.5523 20 16 20H14V10H16V8H14V6H17V4H14V3C14 1.89543 13.1046 1 12 1Z" />
+                        </svg>
+                    </div>
+                    <p class="text-lg font-medium text-center mb-4">Market Integration</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            <span>Digital Market Place</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            <span>Warehouse Receipts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            <span>Supply Chain Integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">•</span>
+                            <span>Export Market Linkages</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">BTMAgriTech</h3>
+                    <p class="mb-4">Transforming agriculture through innovative digital solutions.</p>
+                    <p>123 Farm Road, Countryside<br />info@agritech.com<br />+1 (234) 000-0000-000</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary-200">Home</a></li>
+                        <li><a href="#" class="hover:text-primary-200">Services</a></li>
+                        <li><a href="#" class="hover:text-primary-200">Solutions</a></li>
+                        <li><a href="#" class="hover:text-primary-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Subscribe</h3>
+                    <p class="mb-4">Stay updated with our latest news and updates.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l text-gray-800 w-full">
+                        <button class="bg-primary-600 hover:bg-primary-700 px-4 py-2 rounded-r">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-primary-700 mt-8 pt-8 text-center">
+                <p>© 2023 BTMAgriTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
