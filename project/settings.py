@@ -24,7 +24,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "unsafe-local-key")
 DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
 
 
-ALLOWED_HOSTS = ["your-app-name.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["Devlop.onrender.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
