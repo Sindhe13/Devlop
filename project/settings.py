@@ -23,8 +23,8 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "unsafe-local-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
 
-# Allow only your Render domain or all hosts temporarily
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "*").split(",")
+
+ALLOWED_HOSTS = ["your-app-name.onrender.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
