@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Agriculture Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #f9fbfd 0%, #e6f0ff 100%);
+      color: #2d3748;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+      color: white;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+    
+    header.scrolled {
+      padding: 10px 40px;
+      background: rgba(44, 82, 130, 0.98);
+    }
+    
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+    }
+    
+    header h1 i {
+      margin-right: 10px;
+      font-size: 1.8rem;
+    }
+    
+    nav {
+      display: flex;
+    }
+    
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+      position: relative;
+      padding: 5px 0;
+    }
+    
+    nav a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ffe57f;
+      transition: width 0.3s ease;
+    }
+    
+    nav a:hover {
+      color: #ffe57f;
+    }
+    
+    nav a:hover:after {
+      width: 100%;
+    }
+
+    /* Section Styling */
+    section {
+      display: flex;
+      min-height: 100vh;
+      padding: 100px 60px 60px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    section:nth-child(even) {
+      flex-direction: row-reverse;
+      background: linear-gradient(135deg, #ffffff 0%, #f1f8ff 100%);
+    }
+    
+    section:nth-child(odd) {
+      background: linear-gradient(135deg, #f1f8ff 0%, #e6f0ff 100%);
+    }
+    
+    .content-container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .text-side {
+      flex: 1;
+      padding: 40px;
+      z-index: 2;
+      position: relative;
+    }
+    
+    .text-side h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: #2c5282;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .text-side h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #3182ce, #63b3ed);
+      border-radius: 2px;
+    }
+    
+    .text-side ul {
+      margin-left: 20px;
+      list-style: none;
+      color: #4a5568;
+    }
+    
+    .text-side ul li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      padding-left: 30px;
+      position: relative;
+      transition: transform 0.3s;
+    }
+    
+    .text-side ul li:hover {
+      transform: translateX(5px);
+    }
+    
+    .text-side ul li:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      background: linear-gradient(135deg, #3182ce, #63b3ed);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .image-side {
+      flex: 1;
+      min-height: 420px;
+      border-radius: 16px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+    
+    .image-side:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(49, 130, 206, 0.1) 0%, rgba(99, 179, 237, 0.2) 100%);
+      border-radius: 16px;
+    }
+    
+    .image-side:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    /* Section icons */
+    .section-icon {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #3182ce, #63b3ed);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      box-shadow: 0 8px 20px rgba(49, 130, 206, 0.3);
+      z-index: 3;
+    }
+
+    /* Decorative floating elements */
+    .bubble {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite;
+      z-index: 1;
+    }
+    
+    .bubble.small { width: 20px; height: 20px; }
+    .bubble.medium { width: 40px; height: 40px; }
+    .bubble.large { width: 60px; height: 60px; }
+    
+    .shape {
+      position: absolute;
+      animation: float 10s ease-in-out infinite;
+      opacity: 0.1;
+      z-index: 0;
+    }
+    
+    .shape.triangle {
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 50px solid #3182ce;
+      background: transparent;
+      border-radius: 0;
+    }
+    
+    .shape.square {
+      width: 40px;
+      height: 40px;
+      background: #3182ce;
+      transform: rotate(45deg);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+      color: white;
+      font-size: 1rem;
+    }
+    
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #3182ce, #63b3ed);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 4px 15px rgba(49, 130, 206, 0.4);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 999;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Responsive */
+    @media(max-width: 1024px) {
+      section {
+        padding: 100px 40px 40px;
+      }
+      
+      .content-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      section:nth-child(even) .content-container {
+        flex-direction: column;
+      }
+      
+      .text-side, .image-side {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      
+      .text-side h2:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .text-side ul li {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+      }
+      
+      .section-icon {
+        top: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+      }
+    }
+    
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+      
+      header h1 {
+        margin-bottom: 10px;
+      }
+      
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav a {
+        margin: 5px 10px;
+        font-size: 0.9rem;
+      }
+      
+      section {
+        padding: 80px 20px 20px;
+      }
+      
+      .text-side h2 {
+        font-size: 2rem;
+      }
+      
+      .image-side {
+        min-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <h1><i class="fas fa-seedling"></i>BTMAgriSmart</h1>
+    <nav>
+      <a href="/Agri_2/">Home</a>
+      <a href="/Agri_4/">Solutions</a>
+      <a href="/Agri_5/">About</a>
+      
+    </nav>
+  </header>
+
+  <!-- Core Solutions -->
+  <section id="core">
+    <div class="section-icon">
+      <i class="fas fa-dot-circle"></i>
+    </div>
+    <div class="content-container">
+      <div class="text-side">
+        <h2>Core Solution Areas</h2>
+        <ul>
+          <li>Smart Farming with IoT Sensors & AI</li>
+          <li>Drone-based Crop Monitoring & Spraying</li>
+          <li>Village-level Digital Kiosks & Internet Centers</li>
+          <li>Weather & Soil Monitoring Stations</li>
+          <li>Agriculture Data Centers & Cloud Platforms</li>
+          <li>Farmer Mobile Apps & E-Market Linkages</li>
+          <li>Agriculture Surveillance & Security Solutions</li>
+        </ul>
+      </div>
+      <div class="image-side" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+  </section>
+
+  <!-- IoT Monitoring -->
+  <section id="iot">
+    <div class="section-icon">
+      <i class="fas fa-satellite"></i>
+    </div>
+    <div class="content-container">
+      <div class="text-side">
+        <h2>Smart Farming & IoT Monitoring</h2>
+        <ul>
+          <li>Soil moisture, pH, nutrient level sensors</li>
+          <li>Crop health monitoring with AI analytics</li>
+          <li>Automated irrigation systems</li>
+          <li>Real-time alerts for pest/disease detection</li>
+          <li>Fertilizer & water use optimization</li>
+        </ul>
+      </div>
+      <div class="image-side" style="background-image:url('https://images.unsplash.com/photo-1524592714635-d77511a4834f?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+  </section>
+
+  <!-- Drone Tech -->
+  <section id="drone">
+    <div class="section-icon">
+      <i class="fas fa-drone"></i>
+    </div>
+    <div class="content-container">
+      <div class="text-side">
+        <h2>Drone Technologies for Agriculture</h2>
+        <ul>
+          <li>Crop mapping & plant health imaging</li>
+          <li>Pesticide & fertilizer spraying with precision</li>
+          <li>Yield estimation and predictive analytics</li>
+          <li>Live aerial surveillance of farmlands</li>
+        </ul>
+      </div>
+      <div class="image-side" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+  </section>
+
+  <!-- Weather Stations -->
+  <section id="weather">
+    <div class="section-icon">
+      <i class="fas fa-cloud-sun"></i>
+    </div>
+    <div class="content-container">
+      <div class="text-side">
+        <h2>Weather & Environmental Stations</h2>
+        <ul>
+          <li>Real-time weather forecasting at Panchayat level</li>
+          <li>Rainfall, temperature, humidity, and wind monitoring</li>
+          <li>Climate-resilient crop advisory services</li>
+          <li>Integration with IMD & Agri-AI models</li>
+        </ul>
+      </div>
+      <div class="image-side" style="background-image:url('https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+  </section>
+
+  <!-- Command Centers -->
+  <section id="command">
+    <div class="section-icon">
+      <i class="fas fa-chart-line"></i>
+    </div>
+    <div class="content-container">
+      <div class="text-side">
+        <h2>Digital Agriculture Command Centers</h2>
+        <ul>
+          <li>Centralized State/District Dashboards</li>
+          <li>AI & Big Data for Crop Pattern Analysis</li>
+          <li>Disaster Management & Insurance Coordination</li>
+          <li>Monitoring of Subsidies & Government Schemes</li>
+        </ul>
+      </div>
+      <div class="image-side" style="background-image:url('https://images.unsplash.com/photo-1581094288338-2349e4d7b6ff?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+  </section>
+
+  <!-- Connectivity -->
+  <section id="connectivity">
+    <div class="section-icon">
+      <i class="fas fa-wifi"></i>
+    </div>
+    <div class="content-container">
+      <div class="text-side">
+        <h2>Village-Level Connectivity Infrastructure</h2>
+        <ul>
+          <li>High-speed Internet at Gram Panchayat Level</li>
+          <li>Solar-powered Digital Agri Kiosks</li>
+          <li>Common Service Centers (CSC) with Agriculture Portals</li>
+          <li>Video Training for Farmers in Local Languages</li>
+        </ul>
+      </div>
+      <div class="image-side" style="background-image:url('https://images.unsplash.com/photo-1581091870621-1c0c48e31dfe?auto=format&fit=crop&w=1000&q=80');"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Smart Agriculture Solutions | All Rights Reserved</p>
+  </footer>
+
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Floating elements
+    document.querySelectorAll("section").forEach(sec => {
+      // Add bubbles
+      for(let i = 0; i < 6; i++){
+        const bubble = document.createElement("div");
+        bubble.className = "bubble " + ["small","medium","large"][Math.floor(Math.random()*3)];
+        bubble.style.top = Math.random() * 90 + "%";
+        bubble.style.left = Math.random() * 90 + "%";
+        bubble.style.animationDelay = Math.random() * 5 + "s";
+        sec.appendChild(bubble);
+      }
+      
+      // Add shapes
+      for(let i = 0; i < 3; i++){
+        const shape = document.createElement("div");
+        shape.className = "shape " + ["triangle", "square"][Math.floor(Math.random()*2)];
+        shape.style.top = Math.random() * 90 + "%";
+        shape.style.left = Math.random() * 90 + "%";
+        shape.style.animationDelay = Math.random() * 5 + "s";
+        sec.appendChild(shape);
+      }
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      // Back to top button
+      const backToTop = document.getElementById('backToTop');
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    
+    // Back to top functionality
+    document.getElementById('backToTop').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Add smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        // Remove e.preventDefault() to allow normal navigation
+        // e.preventDefault();
+        
+        // Comment out smooth scroll behavior to allow page navigation
+        /*
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+        */
+      });
+    });
+  </script>
+</body>
+</html>

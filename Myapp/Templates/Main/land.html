@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTSM Info Solutions Pvt Ltd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a56db',
+                        secondary: '#0e9f6e',
+                        dark: '#1f2937',
+                        light: '#f9fafb',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-pattern {
+            background: linear-gradient(120deg, rgba(26, 86, 219, 0.85), rgba(14, 159, 110, 0.85)), 
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            background: linear-gradient(135deg, #1a56db, #0e9f6e);
+            color: white;
+        }
+        
+        .stat-card:hover i {
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-primary">BTSM Info Solutions <span class="text-secondary">Pvt Ltd</span></div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/Land_1/" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="/Land_2/" class="text-gray-700 hover:text-primary transition">About</a>
+                    <a href="/Land_3/" class="text-gray-700 hover:text-primary transition">Services</a>
+                    <a href="/Land_4/" class="text-gray-700 hover:text-primary transition">Contact</a>
+                    <div class="relative dropdown">
+                        <button class="text-gray-700 hover:text-primary transition flex items-center">
+                            Our Websites
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute hidden mt-2 w-48 rounded-md shadow-lg bg-white border border-gray-200">
+                            <a href="/page1/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition flex items-center">
+                                <i class="fas fa-cloud text-primary mr-2"></i>
+                                Cloud Base Development
+                            </a>
+                            <a href="/Agri_1/" class="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-secondary transition flex items-center">
+                                <i class="fas fa-seedling text-secondary mr-2"></i>
+                                Smart Agriculture
+                            </a>
+
+                             <a href="/Edu_1/" class="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-secondary transition flex items-center">
+                                <i class="fas fa-seedling text-secondary mr-2"></i>
+                                Education System
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern pt-24 pb-20 md:pt-32 md:pb-28 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:w-3/4 lg:w-2/3">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Innovative Digital Solutions for Modern Business</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Transforming industries with cutting-edge cloud development and sustainable agriculture technologies</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="bg-primary hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition">Get Started</a>
+                    <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary px-6 py-3 rounded-md font-medium transition">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="stat-card bg-gray-50 p-8 rounded-lg text-center border border-gray-100">
+                    <i class="fas fa-cloud-upload-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2">98%</h3>
+                    <p class="text-gray-600">Cloud Uptime Guarantee</p>
+                </div>
+                <div class="stat-card bg-gray-50 p-8 rounded-lg text-center border border-gray-100">
+                    <i class="fas fa-chart-line text-4xl text-primary mb-4"></i>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2">45%</h3>
+                    <p class="text-gray-600">Average Yield Increase</p>
+                </div>
+                <div class="stat-card bg-gray-50 p-8 rounded-lg text-center border border-gray-100">
+                    <i class="fas fa-users text-4xl text-primary mb-4"></i>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2">500+</h3>
+                    <p class="text-gray-600">Satisfied Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Websites Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Digital Platforms</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Explore our innovative solutions designed to transform industries and drive growth</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Cloud Platform -->
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-cloud text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Cloud Base Development</h3>
+                        <p class="text-gray-600 mb-6">Scalable cloud solutions that drive innovation and optimize business performance with cutting-edge technology.</p>
+                        <a href="/page1/" class="text-primary font-medium hover:underline flex items-center">
+                            Explore Platform
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                {% comment %}  {% endcomment %}
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-cloud text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Education System</h3>
+                        <p class="text-gray-600 mb-6">Scalable cloud solutions that drive innovation and optimize business performance with cutting-edge technology.</p>
+                        <a href="/Edu_1/" class="text-primary font-medium hover:underline flex items-center">
+                            Explore Platform
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                {% comment %}  {% endcomment %}
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-cloud text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Cloud Base Development</h3>
+                        <p class="text-gray-600 mb-6">Scalable cloud solutions that drive innovation and optimize business performance with cutting-edge technology.</p>
+                        <a href="/page1/" class="text-primary font-medium hover:underline flex items-center">
+                            Explore Platform
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Agriculture Platform -->
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center">
+                        <i class="fas fa-seedling text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Agriculture</h3>
+                        <p class="text-gray-600 mb-6">Revolutionizing farming with IoT, data analytics, and sustainable practices for increased yield and efficiency.</p>
+                        <a href="#" class="text-secondary font-medium hover:underline flex items-center">
+                            Explore Platform
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-blue-100 text-xl mb-10 max-w-3xl mx-auto">Join hundreds of companies that have accelerated their growth with our innovative solutions</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="bg-white text-primary px-8 py-4 rounded-md font-medium hover:bg-gray-100 transition">Get Started</a>
+                <a href="#" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-md font-medium hover:bg-white hover:text-primary transition">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">InnovateCorp</h3>
+                    <p class="mb-6">Transforming industries with innovative digital solutions and sustainable technologies.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Cloud Development</a></li>
+                        <li><a href="#" class="hover:text-white transition">Smart Agriculture</a></li>
+                        <li><a href="#" class="hover:text-white transition">Data Analytics</a></li>
+                        <li><a href="#" class="hover:text-white transition">IoT Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-secondary"></i>
+                            <span>123 Innovation Drive, Tech City, TC 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-secondary"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-secondary"></i>
+                            <span>info@innovatecorp.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-sm text-center">
+                <p>© 2023 InnovateCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for dropdown functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('mouseenter', function() {
+                    this.querySelector('.dropdown-menu').classList.add('block');
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    this.querySelector('.dropdown-menu').classList.remove('block');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
